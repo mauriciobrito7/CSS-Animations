@@ -1,0 +1,59 @@
+p {
+    background: yellow;
+    padding: 1em;
+    /* permite indicar un tiempo y una propiedad */
+    transition: all 0.5s;
+    /*cualquier propiedad que cambie le vas a dar una animación de medio segundo*/
+}
+
+.animate p.primero {
+    text-align: right;
+}
+
+span {
+    position: relative;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.animate span {
+    left: 85%;
+}
+
+
+/*los elemento inline no se pueden transformar
+porque no tienen dimensiones 
+*/
+
+strong {
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.animate p strong {
+    transform: translateX(calc(100vw - 100% - 3em));
+}
+
+.flex {
+    display: flex;
+    background: lime;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.item {
+    color: red;
+    padding: 2em 4em;
+    border: 1px solid currentColor;
+    transition: all 1s;
+}
+
+.item:first-child {
+    background: white;
+    order: 0;
+}
+
+.animate .flex .item:first-child {
+    order: 5;
+    /* se anima como entero */
+}
