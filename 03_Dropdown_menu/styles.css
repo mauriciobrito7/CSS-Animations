@@ -1,0 +1,38 @@
+.menu,
+[class^="menu--"] {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu--child {
+    position: absolute;
+    /*De donde se va a transformar*/
+    transform-origin: top center;
+    transform: scale(1, 0);
+    transition: transform 0.3s;
+}
+
+[class^="menu__item"] {
+    background: #333;
+}
+
+[class^="menu__item"]:hover {
+    background: #111;
+}
+
+[class^="menu__item"]:hover .menu--child {
+    transform: scale(1, 1);
+}
+
+[class^="menu__link"] {
+    display: block;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    color: #ddd;
+}
