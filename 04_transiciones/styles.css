@@ -1,0 +1,24 @@
+.ball {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left 0.5s, top 0.5s 0.5s;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+.animate .ball {
+    left: calc(100vw - 100px);
+    top: calc(100vh - 100px);
+}
+
+button {
+    margin: auto;
+}
