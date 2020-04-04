@@ -1,0 +1,90 @@
+html {
+  --offcanvas: 50vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  background: coral;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+body.translate {
+  -webkit-transform: translateX(var(--offcanvas));
+          transform: translateX(var(--offcanvas));
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+.main-header {
+  height: 3em;
+  background: #3db8f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1em;
+  color: white;
+}
+
+.toggle-menu {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1.5em;
+  margin-right: 1em;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #fff), color-stop(60%, #fff), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(80%, #fff));
+  background: linear-gradient(#fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%);
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1aa2e6;
+  width: var(--offcanvas);
+  height: 100vh;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.main-menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.main-menu li {
+  padding: 0.5em 1em;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

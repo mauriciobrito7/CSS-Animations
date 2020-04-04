@@ -1,0 +1,67 @@
+html {
+    --offcanvas: 50vw;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+body {
+    background: coral;
+    transition: transform 0.2s;
+    &.translate {
+        transform: translateX(var(--offcanvas));
+        transition: transform 0.2s;
+    }
+    &.overflow-hidden {
+        overflow: hidden;
+    }
+}
+
+.main-header {
+    height: 3em;
+    background: hsl(200, 90, 60);
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    color: white;
+}
+
+.toggle-menu {
+    content: "";
+    display: block;
+    width: 2em;
+    height: 1.5em;
+    margin-right: 1em;
+    cursor: pointer;
+    background: linear-gradient( #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%);
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: hsl(200, 80, 50);
+    width: var(--offcanvas);
+    height: 100vh;
+    transform: translate(-100%);
+    transition: transform 0.2s;
+}
+
+.main-menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    li {
+        padding: 0.5em 1em;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
