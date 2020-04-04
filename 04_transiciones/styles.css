@@ -15,6 +15,7 @@ body {
 }
 
 .animate .ball {
+    /*Por cascada este es el estado inicial*/
     transition: left 2s, background-color 2s, top 3s 2s;
     left: calc(100vw - 100px);
     top: calc(100vh - 100px);
