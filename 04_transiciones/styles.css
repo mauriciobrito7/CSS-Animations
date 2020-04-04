@@ -6,7 +6,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    transition: left 0.5s, top 0.5s 0.5s;
+    transition: left 0.5s, background-color 0.5s, top 0.5s 0.5s;
 }
 
 body {
@@ -15,8 +15,10 @@ body {
 }
 
 .animate .ball {
+    transition: left 2s, background-color 2s, top 3s 2s;
     left: calc(100vw - 100px);
     top: calc(100vh - 100px);
+    background: green;
 }
 
 button {
