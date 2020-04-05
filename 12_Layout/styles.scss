@@ -1,0 +1,56 @@
+:root {
+    --animation-time: 1s;
+}
+
+body {
+    display: grid;
+    margin: 0;
+    min-height: 100vh;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 80px 1fr 80px;
+    overflow: hidden;
+}
+
+header,
+footer {
+    grid-column: span 2;
+    background: #00cbff;
+}
+
+header {
+    animation: header var(--animation-time);
+    @keyframes header {
+        from {
+            transform: translateY(-100%);
+        }
+    }
+}
+
+footer {
+    animation: footer var(--animation-time);
+    @keyframes footer {
+        from {
+            transform: translateY(100%);
+        }
+    }
+}
+
+nav {
+    background: #fba905;
+    animation: nav var(--animation-time);
+    @keyframes nav {
+        from {
+            transform: translate(-100%);
+        }
+    }
+}
+
+main {
+    padding-left: 1em;
+    animation: main var(--animation-time);
+    @keyframes main {
+        from {
+            transform: translate(100%);
+        }
+    }
+}
