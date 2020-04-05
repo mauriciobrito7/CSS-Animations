@@ -1,0 +1,39 @@
+.button {
+    display: table;
+    padding: 1em 2em;
+    background: hsl(10, 80, 60);
+    color: #fff;
+    margin: 1em auto;
+    cursor: pointer;
+}
+
+.ball {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 1em 0;
+    transform: translateX(0) rotate(0);
+    .animate & {
+        transform: translateX(calc(100vw - 100%)) rotate(2turn);
+    }
+    &.ease {
+        transition: transform 2s ease;
+    }
+    &.ease-in {
+        transition: transform 2s ease-in;
+    }
+    &.ease-out {
+        transition: transform 2s ease-out;
+    }
+    &.ease-in-out {
+        transition: transform 2s ease-in-out;
+    }
+    &.linear {
+        transition: transform 2s linear;
+    }
+}

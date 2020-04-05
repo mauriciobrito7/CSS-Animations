@@ -1,0 +1,127 @@
+body {
+  counter-reset: contador;
+  -webkit-animation: contar 10s alternate infinite;
+          animation: contar 10s alternate infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+body::after {
+  content: counter(contador);
+  font-size: 16em;
+}
+
+@-webkit-keyframes contar {
+  10% {
+    counter-increment: contador 1;
+    background: #ff9900;
+    color: #0066ff;
+  }
+  20% {
+    counter-increment: contador 2;
+    background: #ccff00;
+    color: #3300ff;
+  }
+  30% {
+    counter-increment: contador 3;
+    background: #33ff00;
+    color: #cc00ff;
+  }
+  40% {
+    counter-increment: contador 4;
+    background: #00ff66;
+    color: #ff0099;
+  }
+  50% {
+    counter-increment: contador 5;
+    background: cyan;
+    color: red;
+  }
+  60% {
+    counter-increment: contador 6;
+    background: #0066ff;
+    color: #ff9900;
+  }
+  70% {
+    counter-increment: contador 7;
+    background: #3300ff;
+    color: #ccff00;
+  }
+  80% {
+    counter-increment: contador 8;
+    background: #cc00ff;
+    color: #33ff00;
+  }
+  90% {
+    counter-increment: contador 9;
+    background: #ff0099;
+    color: #00ff66;
+  }
+  100% {
+    counter-increment: contador 10;
+    background: red;
+    color: cyan;
+  }
+}
+
+@keyframes contar {
+  10% {
+    counter-increment: contador 1;
+    background: #ff9900;
+    color: #0066ff;
+  }
+  20% {
+    counter-increment: contador 2;
+    background: #ccff00;
+    color: #3300ff;
+  }
+  30% {
+    counter-increment: contador 3;
+    background: #33ff00;
+    color: #cc00ff;
+  }
+  40% {
+    counter-increment: contador 4;
+    background: #00ff66;
+    color: #ff0099;
+  }
+  50% {
+    counter-increment: contador 5;
+    background: cyan;
+    color: red;
+  }
+  60% {
+    counter-increment: contador 6;
+    background: #0066ff;
+    color: #ff9900;
+  }
+  70% {
+    counter-increment: contador 7;
+    background: #3300ff;
+    color: #ccff00;
+  }
+  80% {
+    counter-increment: contador 8;
+    background: #cc00ff;
+    color: #33ff00;
+  }
+  90% {
+    counter-increment: contador 9;
+    background: #ff0099;
+    color: #00ff66;
+  }
+  100% {
+    counter-increment: contador 10;
+    background: red;
+    color: cyan;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

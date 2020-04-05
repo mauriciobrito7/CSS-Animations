@@ -1,0 +1,41 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.heart {
+    --size: 200px;
+    background: red;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: 100%;
+        transform: translateY(-50%);
+    }
+    &::after {
+        transform: translate(50%);
+    }
+    &:hover {
+        animation-play-state: paused;
+    }
+    @keyframes beat {
+        to {
+            transform: rotate(-45deg) scale(1.2);
+        }
+    }
+}

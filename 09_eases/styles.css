@@ -1,0 +1,69 @@
+.button {
+  display: table;
+  padding: 1em 2em;
+  background: #eb6347;
+  color: #fff;
+  margin: 1em auto;
+  cursor: pointer;
+}
+
+.ball {
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 1em 0;
+  -webkit-transform: translateX(0) rotate(0);
+          transform: translateX(0) rotate(0);
+}
+
+.animate .ball {
+  -webkit-transform: translateX(calc(100vw - 100%)) rotate(2turn);
+          transform: translateX(calc(100vw - 100%)) rotate(2turn);
+}
+
+.ball.ease {
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+}
+
+.ball.ease-in {
+  -webkit-transition: -webkit-transform 2s ease-in;
+  transition: -webkit-transform 2s ease-in;
+  transition: transform 2s ease-in;
+  transition: transform 2s ease-in, -webkit-transform 2s ease-in;
+}
+
+.ball.ease-out {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  transition: -webkit-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  transition: transform 2s ease-out, -webkit-transform 2s ease-out;
+}
+
+.ball.ease-in-out {
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
+}
+
+.ball.linear {
+  -webkit-transition: -webkit-transform 2s linear;
+  transition: -webkit-transform 2s linear;
+  transition: transform 2s linear;
+  transition: transform 2s linear, -webkit-transform 2s linear;
+}
+/*# sourceMappingURL=styles.css.map */
