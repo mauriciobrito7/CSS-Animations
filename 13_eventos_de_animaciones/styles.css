@@ -1,0 +1,51 @@
+:root {
+  --animation-time: 1s;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+p {
+  margin: 1em auto !important;
+}
+
+p + p {
+  margin: 0 auto;
+}
+
+#button {
+  background: #f2800d;
+  margin: auto !important;
+  color: white;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+}
+
+#button.animate {
+  -webkit-animation: grow 2s 1 alternate;
+          animation: grow 2s 1 alternate;
+}
+
+@-webkit-keyframes grow {
+  to {
+    background: #80f20d;
+  }
+}
+
+@keyframes grow {
+  to {
+    background: #80f20d;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

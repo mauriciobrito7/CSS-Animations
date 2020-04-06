@@ -1,0 +1,33 @@
+:root {
+    --animation-time: 1s;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    margin: 1em auto !important;
+    +p {
+        margin: 0 auto;
+    }
+}
+
+#button {
+    background: hsl(30, 90, 50);
+    margin: auto !important;
+    color: white;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    &.animate {
+        animation: grow 2s 1 alternate;
+    }
+    @keyframes grow {
+        to {
+            background: hsl(90, 90, 50);
+        }
+    }
+}
