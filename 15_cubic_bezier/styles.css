@@ -1,0 +1,45 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#ball {
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 1em auto;
+  border-radius: 50%;
+  -webkit-animation: rebotar 1s cubic-bezier(0.33, -0.61, 0.38, 1.42) forwards;
+          animation: rebotar 1s cubic-bezier(0.33, -0.61, 0.38, 1.42) forwards;
+}
+
+@-webkit-keyframes rebotar {
+  to {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+}
+
+@keyframes rebotar {
+  to {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+}
+/*# sourceMappingURL=styles.css.map */

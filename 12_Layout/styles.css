@@ -97,4 +97,12 @@ main {
             transform: translate(100%);
   }
 }
+
+header,
+footer,
+main,
+nav {
+  -webkit-animation-timing-function: cubic-bezier(0.64, 0.09, 0.4, 1.25);
+          animation-timing-function: cubic-bezier(0.64, 0.09, 0.4, 1.25);
+}
 /*# sourceMappingURL=styles.css.map */

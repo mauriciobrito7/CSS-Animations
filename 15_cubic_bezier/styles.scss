@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+#ball {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 1em auto;
+    border-radius: 50%;
+    animation: rebotar 1s cubic-bezier(0.33, -0.61, 0.38, 1.42) forwards;
+    @keyframes rebotar {
+        to {
+            transform: translateY(300px);
+        }
+    }
+}

@@ -54,3 +54,10 @@ main {
         }
     }
 }
+
+header,
+footer,
+main,
+nav {
+    animation-timing-function: cubic-bezier(0.64, 0.09, 0.4, 1.25);
+}
