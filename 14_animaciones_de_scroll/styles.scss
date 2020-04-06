@@ -1,0 +1,84 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 16em;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    &__img img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+        transform: scale(0);
+        &.animate {
+            animation: appear 0.5s forwards;
+            @keyframes appear {
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+    &__img {
+        transition: inherit;
+    }
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1em;
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transform: translate(0, 100%);
+        transition: inherit;
+        z-index: 100;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(hsla(340, 80, 60, 0.8), hsla(200, 80, 60, 0.8));
+        height: 0%;
+        width: 100%;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        transform: translate(-50%, 50%) scale(0.01);
+        transition: inherit;
+    }
+    &:hover {
+        .card__content {
+            transform: translate(0);
+            transition: transform 0.2s 0.25s;
+        }
+        .card__img {
+            transform: scale(1.5) rotate(10deg);
+            transition: transform 0.2s 0.25s;
+        }
+        &::after {
+            transform: scale(2.5);
+        }
+    }
+}
