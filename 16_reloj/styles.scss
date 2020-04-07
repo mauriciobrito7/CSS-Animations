@@ -1,0 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background: #222;
+}
+
+.reloj {
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(#666, #222);
+    border-radius: 50%;
+    position: relative;
+    .hour {
+        position: absolute;
+        color: white;
+        text-shadow: 1px 1px 1px #000;
+        width: 2em;
+        height: 1em;
+        top: 1em;
+        left: calc(50% - 1em);
+        transform-origin: center calc(250px - 1em);
+        span {
+            display: block;
+            width: 2em;
+            height: 1em;
+            text-align: center;
+        }
+    }
+    @for $i from 1 through 12 {
+        .hour:nth-child(#{$i}) {
+            transform: rotate(#{$i * 30}deg);
+            span {
+                display: block;
+                transform: rotate(-#{$i * 30}deg);
+            }
+        }
+    }
+    .aguja {
+        width: 2px;
+        height: 200px;
+        background: white;
+        position: absolute;
+        left: 249px;
+        top: 50px;
+        transform-origin: center bottom;
+        &.segundos {
+            animation: segundos infinite 60s steps(59);
+            @keyframes segundos {
+                to {
+                    transform: rotate(1turn);
+                }
+            }
+        }
+        &.minutos {
+            animation: segundos infinite 3600s linear;
+            @keyframes segundos {
+                to {
+                    transform: rotate(1turn);
+                }
+            }
+        }
+    }
+}
