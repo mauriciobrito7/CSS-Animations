@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
     <style>
         .box {
             border: 1px dashed red;
@@ -18,24 +17,63 @@
             position: relative;
             left: calc(50% - 250px);
         }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transform: translateX(-250px);
+            animation: fade 0.5s ease-in forwards;
+        }
+        
+        @keyframes fade {
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
     </style>
     <title>Intersection Observer</title>
 </head>
 
 <body>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3755360/pexels-photo-3755360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3278000/pexels-photo-3278000.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3960076/pexels-photo-3960076.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="lazy-image" />
+    </div>
     <video id="video" controls muted src="./Loading Placeholder Effect _ Loading Placeholder like Facebook,LinkedIn using HT.mp4"></video>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3934512/pexels-photo-3934512.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/2440296/pexels-photo-2440296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3270230/pexels-photo-3270230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3204950/pexels-photo-3204950.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3757147/pexels-photo-3757147.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3763949/pexels-photo-3763949.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3278000/pexels-photo-3278000.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="lazy-image" />
+    </div>
+    <div class="box">
+        <img data-src="https://images.pexels.com/photos/3695801/pexels-photo-3695801.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="lazy-image" />
+    </div>
 </body>
 <script src="./index.js"></script>
 
