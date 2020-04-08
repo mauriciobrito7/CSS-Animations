@@ -1,0 +1,38 @@
+.container {
+  height: 274px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.line {
+  height: 12px;
+  margin: 10px;
+  -webkit-animation: pulse 1s infinite ease-in-out;
+          animation: pulse 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    background: rgba(165, 165, 165, 0.1);
+  }
+  50% {
+    background: rgba(165, 165, 165, 0.3);
+  }
+  100% {
+    background: rgba(165, 165, 165, 0.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background: rgba(165, 165, 165, 0.1);
+  }
+  50% {
+    background: rgba(165, 165, 165, 0.3);
+  }
+  100% {
+    background: rgba(165, 165, 165, 0.1);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
