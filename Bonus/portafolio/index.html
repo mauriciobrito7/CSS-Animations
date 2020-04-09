@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Portafolio Dinamico - Mauricio Brito</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <h1>Mauricio Brito</h1>
+                <p>Desarrollador Web</p>
+            </div>
+            <form action="">
+                <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar" />
+            </form>
+            <div class="categorias" id="categorias">
+                <a href="#" class="activo">Todos</a>
+                <a href="#">Naturaleza</a>
+                <a href="#">Ciudades</a>
+                <a href="#">Personas</a>
+                <a href="#">Animales</a>
+            </div>
+        </header>
+        <section class="grid" id="grid">
+            <div class="item" data-categoria="ciudades" data-etiquetas="ciudades autos carros calles" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img//ciudad1.png" alt="city" />
+                </div>
+            </div>
+
+            <div class="item" data-categoria="personas" data-etiquetas="personas mujeres" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img//persona1.png" alt="people" />
+                </div>
+            </div>
+
+            <div class="item" data-categoria="personas" data-etiquetas="personas mujeres" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img//persona2.png" alt="people" />
+                </div>
+            </div>
+
+            <div class="item" data-categoria="animales" data-etiquetas="animales leon" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img/animal1.png" alt="animal" />
+                </div>
+            </div>
+            <div class="item" data-categoria="animales" data-etiquetas="animales oso panda" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img//animal2.png" alt="animal" />
+                </div>
+            </div>
+            <div class="item" data-categoria="ciudades" data-etiquetas="ciudades autos carros calles" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img//ciudad2.png" alt="city" />
+                </div>
+            </div>
+            <div class="item" data-categoria="paisaje" data-etiquetas="paisaje" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img//paisaje1.png" alt="land" />
+                </div>
+            </div>
+            <div class="item" data-categoria="paisaje" data-etiquetas="paisaje" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img//paisaje2.png" alt="land" />
+                </div>
+            </div>
+            <div class="item" data-categoria="naturaleza" data-etiquetas="naturaleza" data-description="1 lorem ipsum">
+                <div class="item-contenido">
+                    <img src="./img//naturaleza1.png" alt="nature" />
+                </div>
+            </div>
+        </section>
+
+        <section class="overlay" id="overlay">
+            <div class="contenedor-img">
+                <button id="btn-cerrar-popup">X</button>
+                <img src="" alt="photo" />
+            </div>
+            <p class="description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iste nostrum voluptate magnam qui assumenda officiis sed libero quisquam a dolore quaerat, doloremque dicta rem odit quidem, quod quis aperiam?
+            </p>
+        </section>
+        <footer class="contenedor">
+            <div class="redes-sociales"></div>
+            <div class="creado-por">Mauricio Brito</div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
