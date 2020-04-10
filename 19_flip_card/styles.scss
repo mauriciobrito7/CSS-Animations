@@ -1,0 +1,52 @@
+body {
+    background: #111;
+    display: grid;
+    min-height: 100vh;
+}
+
+.card-container {
+    width: 20vw;
+    height: 40vw;
+    margin: auto;
+    position: relative;
+    perspective: 1500;
+    &:hover .card {
+        transform: rotateY(180deg);
+    }
+}
+
+.card {
+    box-shadow: 0 10px 20px 5px rgba(#000, 0.5);
+    // la transformación que tenga el papá se la manda a los hijos
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    will-change: transform;
+}
+
+.card,
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.front {
+    background: url(https://es.web.img3.acsta.net/pictures/19/06/04/16/39/4888520.jpg?coixp=51&coiyp=36) center / cover;
+}
+
+.back {
+    background: #000 url(https://i.pinimg.com/236x/8e/ae/69/8eae696c0fbad562f9485ca0f58e54e2--the-s-motion-design.jpg) center top / contain no-repeat;
+    box-shadow: 0 0 2px red;
+    transform: rotateY(180deg);
+    // backface-visibility: hidden;
+    p {
+        margin-top: auto;
+        font-size: 1.2em;
+        padding: 1em;
+        text-align: center;
+    }
+}
