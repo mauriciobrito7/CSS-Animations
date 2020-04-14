@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Menu with clip Path</title>
+</head>
+
+<body>
+    <div class="menu" id="menu">
+        <span class="btn-toggle-menu" id="btn-toggle-menu">MENU</span>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="box">
+        <h2>Lorem ipsum</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo a, doloribus ad ipsam harum soluta minus consequuntur officiis cum molestias iusto reprehenderit, eius tempore repellendus quos aperiam necessitatibus numquam sed?
+        </p>
+    </div>
+    <script>
+        document
+            .getElementById("btn-toggle-menu")
+            .addEventListener("click", (event) => {
+                document.getElementById("menu").classList.toggle("active");
+            });
+    </script>
+</body>
+
+</html>

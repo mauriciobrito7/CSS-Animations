@@ -1,0 +1,95 @@
+.box {
+    background: #ccc;
+    max-width: 720px;
+    margin: 64px auto;
+    padding: 16px;
+    h2 {
+        text-align: center;
+    }
+}
+
+// Menu
+.menu {
+    background: #396362;
+    color: #fff;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    text-align: center;
+    top: 0;
+    left: 0;
+    clip-path: circle(55px at 50% 0);
+    transition: clip-path 0.5s;
+    will-change: clip-path;
+    &.active {
+        clip-path: circle(100% at 50% 50%);
+        & li {
+            animation: desplazamiento 0.5s ease;
+            @keyframes desplazamiento {
+                from {
+                    transform: translateY(1000px);
+                }
+                to {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+.btn-toggle-menu {
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+        animation: rotar 1.5s alternate;
+        @keyframes rotar {
+            0% {
+                transform: rotate(0deg);
+            }
+            20% {
+                transform: rotate(10deg);
+            }
+            40% {
+                transform: rotate(-15deg);
+            }
+            60% {
+                transform: rotate(15deg);
+            }
+            80% {
+                transform: rotate(-10deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+        padding: 0 !important;
+    }
+    & li {
+        list-style: none;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        & a {
+            text-decoration: none;
+            font-size: 40px;
+            letter-spacing: 2px;
+            padding: 15px 30px;
+            color: #f8f8f8;
+            text-transform: uppercase;
+            transition: 0.2s ease all;
+            &:hover {
+                background: #000;
+            }
+        }
+    }
+}
