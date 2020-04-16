@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>My slider</title>
+</head>
+
+<body>
+    <div class="main">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://images.pexels.com/photos/3889765/pexels-photo-3889765.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+                    <div class="info">
+                        <h3>Mauricio Brito</h3>
+                        <p>CS Student</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.pexels.com/photos/1713953/pexels-photo-1713953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.pexels.com/photos/3889765/pexels-photo-3889765.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.pexels.com/photos/3889765/pexels-photo-3889765.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: "auto",
+            spaceBetween: 60,
+            mousewheel: true,
+            loop: true,
+            lazy: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            centeredSlides: true,
+            grabCursor: true,
+        });
+    </script>
+</body>
+
+</html>
