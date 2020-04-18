@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: consolas;
+}
+
+section {
+  padding: 50px;
+  background: #000;
+}
+
+section h2 {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+section p {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+section ::-webkit-scrollbar {
+  width: 0;
+}
+
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#008aff), to(#00ffe7));
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+#progressBar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, bottom bottom, from(#008aff), to(#00ffe7));
+  background: linear-gradient(top top, #008aff, #00ffe7);
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
+/*# sourceMappingURL=styles.css.map */
