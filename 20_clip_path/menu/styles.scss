@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .box {
     background: #ccc;
     max-width: 720px;
@@ -10,7 +15,7 @@
 
 // Menu
 .menu {
-    background: #396362;
+    background: #212121;
     color: #fff;
     position: fixed;
     width: 100vw;
@@ -73,22 +78,71 @@
     justify-content: center;
     align-items: center;
     ul {
-        padding: 0 !important;
-    }
-    & li {
-        list-style: none;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        & a {
-            text-decoration: none;
-            font-size: 40px;
-            letter-spacing: 2px;
-            padding: 15px 30px;
-            color: #f8f8f8;
-            text-transform: uppercase;
-            transition: 0.2s ease all;
-            &:hover {
-                background: #000;
+        &:hover li a {
+            opacity: 0;
+        }
+        & li {
+            list-style: none;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0px !important;
+                padding-bottom: 0px !important;
+            }
+            &:before {
+                content: attr(data-text);
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                color: #fff;
+                font-size: 192px;
+                font-weight: 700;
+                pointer-events: none;
+                opacity: 0;
+                letter-spacing: 20px;
+                transition: 1s;
+                white-space: nowrap;
+            }
+            &:hover:before {
+                opacity: 0.05;
+                letter-spacing: 0px;
+            }
+            & a {
+                position: relative;
+                display: inline-block;
+                background: #2196f3;
+                text-decoration: none;
+                font-size: 40px;
+                letter-spacing: 2px;
+                padding: 15px 30px;
+                color: #f8f8f8;
+                text-transform: uppercase;
+                transition: all 0.5s;
+                z-index: 1;
+                opacity: 1;
+                overflow: hidden;
+                &:hover {
+                    transform: scale(1.2);
+                    z-index: 1000;
+                    background: #ff3f81;
+                    opacity: 1;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100px;
+                    width: 80px;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+                    transform: skewX(35deg);
+                    transition: 0;
+                }
+                &:hover:before {
+                    left: calc(100% + 100px);
+                    transition: .5s;
+                    transition-delay: .2s;
+                }
             }
         }
     }
